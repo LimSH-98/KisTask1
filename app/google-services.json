@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "350144706607",
+    "project_id": "kistask1",
+    "storage_bucket": "kistask1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:350144706607:android:e8b301d28f4c469df3eeda",
+        "android_client_info": {
+          "package_name": "com.example.kistask1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "350144706607-rdvgs64fr79d4mno36tuauo3hrduk54j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8MhSuRMLz2MwiCDW-KmXDU9RKo5mwBbY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "350144706607-rdvgs64fr79d4mno36tuauo3hrduk54j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
