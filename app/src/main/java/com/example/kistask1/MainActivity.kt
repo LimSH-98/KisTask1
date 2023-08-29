@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity(){
     private fun switchScreen(){
         viewBinding.switchBtn.setOnCheckedChangeListener { button, isChecked ->
             if(isChecked){
-                Log.e(TAG, "클릭됨")
+                
             }else{
 
             }
