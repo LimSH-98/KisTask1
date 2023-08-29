@@ -63,6 +63,7 @@ class LoginActivity : AppCompatActivity() {
                     startActivity(intent)
                 }else{
                     // 이메일이 틀렸는지, 비밀번호가 틀렸는지
+                    loginErrorDialog()
                     // this.findViewById<TextInputEditText>(R.id.userIdArea).isVisible = true
                 }
             }
@@ -78,8 +79,4 @@ class LoginActivity : AppCompatActivity() {
             alertDialog.dismiss()
         }
     }
-}
-
-private fun <T> Call<T>.enqueue(any: Any) {
-
 }

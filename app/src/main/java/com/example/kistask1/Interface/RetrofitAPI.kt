@@ -1,10 +1,10 @@
 package com.examle.kistask1.Interface
 
 import com.example.kistask1.model.Board
+import com.example.kistask1.model.SendBoardModel
 import com.example.kistask1.model.User
 import retrofit2.Call
 import retrofit2.http.Body
-import retrofit2.http.GET
 
 import retrofit2.http.POST
 import retrofit2.http.Query
@@ -21,5 +21,6 @@ interface RetrofitAPI {
     @POST("boardList")
     fun getBoardListResponse(@Body user : User) : Call<List<Board>>
 
-
+    @POST("updateBoard")
+    fun updateBoardResponse(@Body board: Board) : Call<String>
 }
