@@ -7,8 +7,16 @@ import android.util.Log
 import android.view.View
 import android.view.View.OnClickListener
 import android.widget.Button
+import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.PagerSnapHelper
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.LayoutManager
+import androidx.recyclerview.widget.RecyclerView.Recycler
+import androidx.recyclerview.widget.SnapHelper
 import com.example.kistask1.adapter.CustomAdapter
 import com.example.kistask1.auth.FirebaseAuthUtils
 import com.example.kistask1.databinding.ActivityMainBinding
@@ -68,9 +76,27 @@ class MainActivity : AppCompatActivity(){
     private fun switchScreen(){
         viewBinding.switchBtn.setOnCheckedChangeListener { button, isChecked ->
             if(isChecked){
-                Log.e(TAG, "클릭됨")
-            }else{
+//                viewBinding.recyclerView.apply {
+//                    addOnScrollListener(object: RecyclerView.OnScrollListener(){
+//                        override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+//                            super.onScrolled(recyclerView, dx, dy)
+//                            val lastItemPosition = (recyclerView.layoutManager as LinearLayoutManager?)!!.findLastCompletelyVisibleItemPosition()
+//                            val itemTotalCount = recyclerView.adapter!!.itemCount
+//
+//                            // 리사이클러뷰 아이템 총 개수
+//                            val totalCount = recyclerView.adapter?.itemCount?.minus(1)
+//
+//                            // 페이징 처리
+//                            if(lastItemPosition == totalCount){
+//
+//                            }
+//                        }
+//                    })
+//                }
+                viewBinding.recyclerView.layoutManager = GridLayoutManager(this, 6, RecyclerView.HORIZONTAL, false)
 
+            }else{
+                viewBinding.recyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
             }
         }
     }
