@@ -1,6 +1,8 @@
 package com.example.kistask1
 
+import android.app.DatePickerDialog
 import android.content.Intent
+import android.icu.text.SimpleDateFormat
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -8,6 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.View.OnClickListener
 import android.view.ViewGroup
+import android.widget.DatePicker
 import android.widget.TextView
 import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.fragment.app.FragmentManager
@@ -16,6 +19,7 @@ import com.example.kistask1.adapter.CustomAdapter
 import com.example.kistask1.databinding.FragmentDetailBinding
 import com.example.kistask1.model.Board
 import com.google.android.material.textfield.TextInputEditText
+import java.util.Calendar
 import java.util.Objects
 import kotlin.concurrent.fixedRateTimer
 
@@ -28,6 +32,7 @@ class DetailFragment : Fragment(){
     private lateinit var url : String
     private lateinit var name : String
     private lateinit var btnClickListener: OnBtnClickListener
+    private var dataFormat = SimpleDateFormat("yyyy-MM-dd")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -108,10 +113,3 @@ class DetailFragment : Fragment(){
     }
 }
 
-//val title = viewBinding.title.text
-//val birthday = viewBinding.birthday.text
-//val intent = Intent(this@DetailFragment.context, MainActivity::class.java)
-//intent.putExtra("index", index)
-//intent.putExtra("title", title)
-//intent.putExtra("birthday", birthday)
-//activity?.startActivity(intent)
